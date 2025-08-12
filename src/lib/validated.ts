@@ -3,7 +3,7 @@ import type { StandardSchemaV1 } from '@standard-schema/spec'
 import type { RemoteForm } from '@sveltejs/kit'
 
 type MaybePromise<T> = T | Promise<T>
-type InferSchemaOutput<T> = T extends StandardSchemaV1<any, infer O> ? O : never
+type InferSchemaOutput<T> = T extends StandardSchemaV1<unknown, infer O> ? O : never
 type FormFunction = <T>(fn: (data: FormData) => MaybePromise<T>) => RemoteForm<T>
 
 export type ValidationError = {

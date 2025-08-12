@@ -1,6 +1,17 @@
 {
 	"name": "formshape",
 	"version": "0.0.1",
+	"description": "Type-safe form validation for SvelteKit's remote functions",
+	"author": "Didier Catz <didier@hey.com> (https://github.com/didier)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/didier/formshape"
+	},
+	"homepage": "https://github.com/didier/formshape",
+	"bugs": {
+		"url": "https://github.com/didier/formshape/issues"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
@@ -9,6 +20,9 @@
 		"prepack": "svelte-kit sync && svelte-package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test": "vitest",
+		"test:ui": "vitest --ui",
+		"test:run": "vitest run",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint ."
 	},
@@ -41,6 +55,7 @@
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/vite": "^4.0.0",
+		"@vitest/ui": "^3.2.4",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
@@ -54,11 +69,21 @@
 		"tailwindcss": "^4.0.0",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
+		"valibot": "^1.1.0",
 		"vite": "^7.0.4",
-		"vite-plugin-devtools-json": "^0.2.0"
+		"vite-plugin-devtools-json": "^0.2.0",
+		"vitest": "^3.2.4",
+		"zod": "^4.0.17"
 	},
 	"keywords": [
-		"svelte"
+		"svelte",
+		"sveltekit",
+		"form",
+		"validation",
+		"typescript",
+		"zod",
+		"valibot",
+		"standard-schema"
 	],
 	"pnpm": {
 		"onlyBuiltDependencies": [
@@ -67,6 +92,6 @@
 	},
 	"dependencies": {
 		"@standard-schema/spec": "^1.0.0",
-		"zod": "^4.0.17"
+		"shiki": "^3.9.2"
 	}
 }
