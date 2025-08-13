@@ -1,5 +1,7 @@
 # formshape
 
+[![npm](https://img.shields.io/badge/npm-formshape-red)](https://www.npmjs.com/package/formshape)
+
 Type-safe form validation for SvelteKit Remote Functions using [Standard Schema](https://standardschema.dev/) compatible validators.
 
 ## Features
