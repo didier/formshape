@@ -1,6 +1,6 @@
 {
 	"name": "formshape",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Type-safe form validation for SvelteKit's remote functions",
 	"author": "Didier Catz <didier@hey.com> (https://github.com/didier)",
 	"license": "MIT",
