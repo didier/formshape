@@ -1,11 +1,6 @@
 <script lang="ts">
 	import { createPost } from './data.remote.js'
-	import {
-		dataRemoteExample,
-		svelteExample,
-		errorFormat,
-		errorHandling
-	} from './code-examples.js'
+	import { dataRemoteExample, svelteExample, errorFormat, errorHandling } from './code-examples.js'
 	import CodeBlock from './CodeBlock.svelte'
 </script>
 
