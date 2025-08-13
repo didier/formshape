@@ -8,7 +8,7 @@
 		"type": "git",
 		"url": "https://github.com/didier/formshape"
 	},
-	"homepage": "https://github.com/didier/formshape",
+	"homepage": "https://formshape.vercel.app",
 	"bugs": {
 		"url": "https://github.com/didier/formshape/issues"
 	},
