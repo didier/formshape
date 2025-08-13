@@ -1,9 +1,6 @@
 # formshape
 
-Type-safe form validation for SvelteKit Remote Functions using Standard Schema compatible validators.
-
-**Author:** [Didier Catz](https://x.com/didiercatz) ([@didier](https://github.com/didier))  
-**Repository:** [github.com/didier/formshape](https://github.com/didier/formshape)
+Type-safe form validation for SvelteKit Remote Functions using [Standard Schema](https://standardschema.dev/) compatible validators.
 
 ## Features
 
