@@ -2,12 +2,11 @@
 	import { createPost } from './data.remote.js'
 	import {
 		dataRemoteExample,
-		diffExample,
 		svelteExample,
 		errorFormat,
 		errorHandling
-	} from '$lib/code-examples.js'
-	import CodeBlock from '$lib/CodeBlock.svelte'
+	} from './code-examples.js'
+	import CodeBlock from './CodeBlock.svelte'
 </script>
 
 <div class="mx-auto min-h-screen max-w-3xl p-8">

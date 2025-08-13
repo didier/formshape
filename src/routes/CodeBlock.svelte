@@ -102,6 +102,7 @@
 </script>
 
 <div class={['[&>pre]:overflow-x-auto [&>pre]:p-4', classes]}>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html highlightedCode}
 </div>
 

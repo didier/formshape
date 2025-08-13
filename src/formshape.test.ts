@@ -1,10 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { createValidated, type ValidationError } from './validated.js'
+import { createValidated, type ValidationError } from './lib/validated.js'
 import { z } from 'zod'
 import * as v from 'valibot'
 
 describe('formshape', () => {
-	let mockForm: any
+	let mockForm: ReturnType<typeof vi.fn>
 
 	beforeEach(() => {
 		mockForm = vi.fn().mockReturnValue({

@@ -24,7 +24,9 @@
 		"test:ui": "vitest --ui",
 		"test:run": "vitest run",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"lint": "prettier --check . && eslint .",
+		"publish": "pnpm test:run && pnpm lint:src && pnpm prepack && npm publish",
+		"lint:src": "prettier --check src && eslint src"
 	},
 	"files": [
 		"dist",
@@ -73,11 +75,13 @@
 		"vite": "^7.0.4",
 		"vite-plugin-devtools-json": "^0.2.0",
 		"vitest": "^3.2.4",
-		"zod": "^4.0.17"
+		"zod": "^4.0.17",
+		"shiki": "^3.9.2"
 	},
 	"keywords": [
 		"svelte",
 		"sveltekit",
+		"sveltekit-remote-functions",
 		"form",
 		"validation",
 		"typescript",
@@ -91,7 +95,6 @@
 		]
 	},
 	"dependencies": {
-		"@standard-schema/spec": "^1.0.0",
-		"shiki": "^3.9.2"
+		"@standard-schema/spec": "^1.0.0"
 	}
 }

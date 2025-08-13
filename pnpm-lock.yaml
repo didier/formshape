@@ -11,9 +11,6 @@ importers:
       '@standard-schema/spec':
         specifier: ^1.0.0
         version: 1.0.0
-      shiki:
-        specifier: ^3.9.2
-        version: 3.9.2
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -66,6 +63,9 @@ importers:
       publint:
         specifier: ^0.3.2
         version: 0.3.12
+      shiki:
+        specifier: ^3.9.2
+        version: 3.9.2
       svelte:
         specifier: ^5.0.0
         version: 5.38.1
