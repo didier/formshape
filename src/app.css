@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 
+@theme {
+	--font-mono: 'Berkeley Mono', monospace;
+}
+
 @layer base {
 	h1,
 	h2,
@@ -9,21 +13,17 @@
 	h5,
 	h6,
 	p {
-		@apply mb-[1em];
+		@apply mt-[2em] mb-[1em];
 	}
 }
 
 @layer components {
-	.form-input {
-		@apply w-full border border-stone-300 bg-white p-2 font-sans dark:border-stone-600 dark:bg-stone-800 dark:text-white placeholder:text-stone-400 dark:placeholder:text-stone-500;
-	}
-
 	.form-label {
 		@apply mb-1 block;
 	}
 
 	.form-error {
-		@apply text-sm text-red-600;
+		@apply text-sm text-red-400;
 	}
 
 	.form-button {
@@ -61,4 +61,11 @@
 	.link-hover {
 		@apply hover:text-black dark:hover:text-white;
 	}
+}
+
+input,
+select,
+textarea,
+.form-input {
+	@apply w-full border border-stone-300 bg-white p-2 font-sans placeholder:text-stone-400 dark:border-stone-600 dark:bg-stone-800 dark:text-white dark:placeholder:text-stone-500;
 }

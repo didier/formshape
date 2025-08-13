@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { createValidated } from './validated.js'
+import { createValidated } from 'formshape'
 import * as v from 'valibot'
 
 // Test the exact scenarios from our test-app
