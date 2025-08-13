@@ -66,6 +66,6 @@ export const errorFormat = `{
   data: { /* original form data */ }
 }`
 
-export const errorHandling = `{#if form.result?.errors?.fieldName}
-  <div class="error">{form.result.errors.fieldName.join(', ')}</div>
-{/if}`
+export const errorHandling = `{#each form.result?.errors?.email as error}
+    <p class="text-red-500">{error}</p>
+{/each}`
