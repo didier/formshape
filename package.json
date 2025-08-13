@@ -25,7 +25,7 @@
 		"test:run": "vitest run",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"publish": "pnpm test:run && pnpm lint:src && pnpm prepack && npm publish",
+		"publish": "pnpm test:run && pnpm lint:src && npm publish",
 		"lint:src": "prettier --check src && eslint src"
 	},
 	"files": [
