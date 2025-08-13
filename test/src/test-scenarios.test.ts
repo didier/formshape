@@ -2,8 +2,8 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { createValidated } from 'formshape'
 import * as v from 'valibot'
 
-// Test the exact scenarios from our test-app
-describe('test-app scenarios', () => {
+// Test the exact scenarios from our test
+describe('test scenarios', () => {
 	const mockForm = vi.fn().mockImplementation((handler) => ({
 		method: 'POST' as const,
 		action: '/test',
@@ -26,7 +26,7 @@ describe('test-app scenarios', () => {
 		mockForm.mockClear()
 	})
 
-	describe('blog post creation (from test-app/src/routes/blog/data.remote.ts)', () => {
+	describe('blog post creation (from test/src/routes/blog/data.remote.ts)', () => {
 		const createPostSchema = v.object({
 			title: v.pipe(v.string(), v.minLength(3, 'Title must be at least 3 characters')),
 			content: v.pipe(v.string(), v.minLength(10, 'Content must be at least 10 characters'))
