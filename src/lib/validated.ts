@@ -6,10 +6,10 @@ type MaybePromise<T> = T | Promise<T>
 type InferSchemaOutput<T> = T extends StandardSchemaV1<unknown, infer O> ? O : never
 type FormFunction = <T>(fn: (data: FormData) => MaybePromise<T>) => RemoteForm<T>
 
-export type ValidationError = {
+export type ValidationError<T extends StandardSchemaV1, O = InferSchemaOutput<T>> = {
 	success: false
-	errors: Record<string, string[]>
-	data: unknown
+	errors: Partial<Record<keyof O, string[]>>
+	data: O
 }
 
 /**
@@ -28,10 +28,9 @@ export function createValidated(form: FormFunction) {
 	return function validated<Schema extends StandardSchemaV1, Result = unknown>(
 		schema: Schema,
 		handler: (data: InferSchemaOutput<Schema>) => MaybePromise<Result>
-	): RemoteForm<Result | ValidationError> {
-		return form<Result | ValidationError>(async (formData) => {
+	): RemoteForm<Result | ValidationError<Schema>> {
+		return form<Result | ValidationError<Schema>>(async (formData) => {
 			const data = Object.fromEntries(formData.entries())
-
 			const result = await schema['~standard'].validate(data)
 
 			if (result.issues) {
@@ -55,7 +54,7 @@ export function createValidated(form: FormFunction) {
 					success: false,
 					errors,
 					data
-				} as ValidationError
+				} as ValidationError<Schema>
 			}
 
 			return handler(result.value as InferSchemaOutput<Schema>)
